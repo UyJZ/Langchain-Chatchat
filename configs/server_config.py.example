@@ -26,7 +26,7 @@ API_SERVER = {
 # fastchat openai_api server
 FSCHAT_OPENAI_API = {
     "host": DEFAULT_BIND_HOST,
-    "port": 20000,
+    "port": 20005,
 }
 
 # fastchat model_worker server
@@ -43,7 +43,7 @@ FSCHAT_MODEL_WORKERS = {
         "infer_turbo": False,
 
         # model_worker多卡加载需要配置的参数
-        # "gpus": None, # 使用的GPU，以str的格式指定，如"0,1"，如失效请使用CUDA_VISIBLE_DEVICES="0,1"等形式指定
+        # "gpus": '1', # 使用的GPU，以str的格式指定，如"0,1"，如失效请使用CUDA_VISIBLE_DEVICES="0,1"等形式指定
         # "num_gpus": 1, # 使用GPU的数量
         # "max_gpu_memory": "20GiB", # 每个GPU占用的最大显存
 
@@ -134,6 +134,6 @@ FSCHAT_MODEL_WORKERS = {
 
 FSCHAT_CONTROLLER = {
     "host": DEFAULT_BIND_HOST,
-    "port": 20001,
+    "port": 20004,
     "dispatch_method": "shortest_queue",
 }
